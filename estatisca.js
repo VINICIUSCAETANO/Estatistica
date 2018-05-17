@@ -3,6 +3,7 @@ var alunos = [];
 var inNome = document.getElementById("inNome");
 var inCurso = document.getElementById("inCurso");
 var inIdade = document.getElementById("inIdade");
+var pre = document.querySelector("pre");
 
 function adicionarAluno() {
     var nome = inNome.value;
@@ -39,9 +40,20 @@ function adicionarAluno() {
     alert("Aluno " + alunos[alunos.length -1].nome + " adicionado com sucesso");
 }
 
-function getTotalAlunos() {
-    return alunos.length;
+function listarAlunos() {
+    //alunos.sort();
+    var out = "";
+    for(var i = 0; i < alunos.length; i++) {
+        out = out + "Nome : " + alunos[i].nome + 
+        "   Curso: " + alunos[i].curso +
+        "   Idade: " + alunos[i].idade + "\n";
+    }
+    pre.textContent = out;
 }
+
 
 var btAdicionar = document.getElementById("btAdicionar");
 btAdicionar.addEventListener("click", adicionarAluno);
+
+var btListar = document.getElementById("btListar");
+btListar.addEventListener("click", listarAlunos);
