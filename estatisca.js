@@ -40,8 +40,18 @@ function adicionarAluno() {
     alert("Aluno " + alunos[alunos.length -1].nome + " adicionado com sucesso");
 }
 
+function comparar(aluno1,aluno2) {
+        if (aluno1.nome < aluno2.nome) {
+          return -1;
+        }
+        if (aluno1.nome > aluno2.nome) {
+          return 1;
+        }
+        return 0;
+      }
+
 function listarAlunos() {
-    //alunos.sort();
+    alunos.sort(comparar);
     var out = "";
     for(var i = 0; i < alunos.length; i++) {
         out = out + "Nome : " + alunos[i].nome + 
