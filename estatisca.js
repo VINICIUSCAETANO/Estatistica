@@ -106,9 +106,9 @@ function estatisticaCursos() {
     "Marketing:  " 
     + (estaCursos.mark/total * 100).toFixed(2) + "%\n" +
     "Processos Gerenciais:  " 
-    + (estaCursos.ads/total * 100).toFixed(2) + "%\n" +
-    "Total:" 
-    + (estaCursos.ads + estaCursos.mark + estaCursos.ger/total * 100).toFixed(2);
+    + (estaCursos.ger/total * 100).toFixed(2) + "%\n" +
+    "Total: " 
+    + ((estaCursos.ads + estaCursos.mark + estaCursos.ger)/total * 100).toFixed(2);
 }
 
 function estatisticaIdades() {
@@ -139,10 +139,10 @@ function estatisticaIdades() {
 
     //Para cada aluno ele ve em que faixa ele está
     for(var i = 0; i < alunos.length; i++) {
-        if(alunos[i].idade > faixa1Min && alunos[i].idade < faixa1Max) {
+        if(alunos[i].idade >= faixa1Min && alunos[i].idade <= faixa1Max) {
             faixa1Alunos++;
         }
-        else if (alunos[i].idade > faixa2Min && alunos[i].idade < faixa2Max) {
+        else if (alunos[i].idade >= faixa2Min && alunos[i].idade <= faixa2Max) {
             faixa2Alunos++;
         }
     }
