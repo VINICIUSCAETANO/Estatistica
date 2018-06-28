@@ -1,10 +1,96 @@
-* {
+.fig1 {
+    float: left;
+    width: 450px;
+    height: 400px;
+}
+h1{ 
+    border-bottom-style: inset;
+    color: white;
+}
+.fig2 {
+    float: right;
+    width: 450px;
+    height: 400px;    
+}
+p {
+    color:white;
+}
+body {
+    color:white
+}
+
+body {
+    background-color:black
+}
+
+body {
+    border-style:outset;
+}
+
+.btn{
+    font-family: arial;
+    font-size:14px;
+    font-weight:700;
+    text-transform:capitalize;
+    border:none;
+    padding:10px;
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none; }
+
+
+.A{
+    background:green;
+    color: black;
+    box-shadow:0 5px 0 #014901;
+  }
+
+
+.A:hover{
+    background:#006000;
+    box-shadow:0 5px 0 #003f00;
+  }
+
+.A:active{
+    position:relative;
+    top:5px;
+    box-shadow:none;
+  }
+
+
+.B{
+    background:white;
+    color: black;
+    box-shadow:0 5px 0 grey;
+  }
+
+.B:hover{
+    background:#bec2be;
+    box-shadow:0 5px 0 #828582;
+  }
+  * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .container {
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
 }
+.C{
+    background: white;
+    color: black;
+    box-shadow:0 5px 0 grey;
+}
+.C:hover{
+    background:#bec2be;
+    box-shadow:0 5px 0 #828582;
+} * {margin: 0;
+    padding: 0;
+    box-sizing: content-box;}
+.C:active{
+    position:relative;
+    top:5px;
+    box-shadow:none;
+  }
