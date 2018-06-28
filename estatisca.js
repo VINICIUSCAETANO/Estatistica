@@ -66,6 +66,10 @@ function comparar(aluno1,aluno2) {
 
 function listarAlunos() {
     //ordena os alunos (alfabeticamente) pelo campo nome
+    if(alunos.length == 0) {
+        alert("Não há alunos cadastrados");
+        return;
+    }
     alunos.sort(comparar);
     var out = "";
     //percorre todos os alunos do vetor e imprime os campos
@@ -79,6 +83,10 @@ function listarAlunos() {
 
 function estatisticaCursos() {
     //os numeros por cursos estao nesse objeto, poderiam ser variaveis separadaa lol
+    if(alunos.length == 0) {
+        alert("Não há alunos cadastrados");
+        return;
+    }
     var estaCursos = {ads: 0, mark: 0, ger: 0}
     var total = alunos.length;
 
@@ -108,15 +116,19 @@ function estatisticaCursos() {
     "Processos Gerenciais:  " 
     + (estaCursos.ger/total * 100).toFixed(2) + "%\n" +
     "Total: " 
-    + ((estaCursos.ads + estaCursos.mark + estaCursos.ger)/total * 100).toFixed(2);
+    + ((estaCursos.ads + estaCursos.mark + estaCursos.ger)/total * 100).toFixed(2) + "%";
 }
 
 function estatisticaIdades() {
-    
+    if(alunos.length == 0) {
+        alert("Não há alunos cadastrados");
+        return;
+    }
     //poderia se usar a funcao array.max() mas nao sei usar ela com vetor de objetos
     var max = -Infinity;
     var min = Infinity;
     var faixas = 2;
+    var total = alunos.length;
 
     //esse for é para saber a idade maxima e minima do vetor alunos
     for(var i = 0; i < alunos.length; i++) {
@@ -152,7 +164,9 @@ function estatisticaIdades() {
     "Faixa 1 - de " +  faixa1Min + " à " + faixa1Max + " : " +
     faixa1Alunos + " alunos\n" + 
     "Faixa 2 - de " +  faixa2Min + " à " + faixa2Max + " : " +
-    faixa2Alunos + " alunos\n";
+    faixa2Alunos + " alunos\n---------------------------------------------\n"+
+    "Faixa 1 : " + (faixa1Alunos/total * 100).toFixed(2) + "%\n" +
+    "Faixa 2 : " + (faixa2Alunos/total * 100).toFixed(2) + "%";
 }
 
 
