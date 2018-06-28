@@ -111,6 +111,7 @@ body {
     color: black;
     box-shadow:0 5px 0 grey;
     width: 120px;
+    border-bottom: #bec2be;
  } 
  .D:hover{
     background:#bec2be;
@@ -127,4 +128,5 @@ body {
 }
 div {
     margin: 0 auto;
+    border-bottom-style: solid;
 }
