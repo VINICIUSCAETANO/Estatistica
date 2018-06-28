@@ -4,8 +4,12 @@
     height: 400px;
 }
 h1{ 
+    text-align: center;
     border-bottom-style: inset;
     color: white;
+    background-color: #222222;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 .fig2 {
     float: right;
@@ -20,6 +24,9 @@ body {
     background-color:black
 }
 
+.in-data {
+    text-align: center;
+}
 
 
 .btn{
@@ -83,7 +90,7 @@ body {
   
 
 .container {
-    width: 400px;
+    width: 800px;
     margin: 0 auto;
 }
 .C{
@@ -112,6 +119,7 @@ body {
     box-shadow:0 5px 0 grey;
     width: 120px;
     border-bottom: #bec2be;
+    margin-bottom: 20px;
  } 
  .D:hover{
     background:#bec2be;
@@ -128,5 +136,18 @@ body {
 }
 div {
     margin: 0 auto;
-    border-bottom-style: solid;
+    /*border-bottom-style: solid;*/
+}
+
+pre {
+    padding: 20px;
+    background-color: #222222;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    line-height: 18pt;
+}
+
+.button-container {
+    text-align: center;
 }
